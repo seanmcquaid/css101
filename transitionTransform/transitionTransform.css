@@ -1,0 +1,78 @@
+.ball {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    background-color: blue;
+    color: white;
+    /* transition will make the browser apply a 
+    transition from 1 css rule to another over a period of time */
+    /* You must be going from A to B to apply a transition */
+    /* Transition takes 2 args */
+    /* 1. which css rules to transition */
+    /* 2. how long to get there */
+    transition: all 2s;
+}
+
+.ball:hover{ 
+    border-radius: 50%;
+    background-color: red;
+    margin-left: 500px;
+    display: inline-block;
+    transform: rotate(1360deg);
+}
+
+.ball.ease {
+    /* a 3rd arg for transition is how the accelerate is applied */
+    transition: all 2s ease-in;
+}
+
+.ball.ease-out{
+    transition: all 2s ease-out;
+}
+
+.ball.what-the {
+    transition-timing-function: cubic-bezier(1,.03,0,-1.04);
+}
+
+.square{
+    width: 200px;
+    height: 200px;
+    background-color: #ff0;
+    border: 5px solid black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    /* transform property allows you apply cool 
+    transformations of any element that is otherwise just a rectange */
+    /* 1. Rotate
+    2. Scale
+    3. Skew
+    4. Translate  */
+}
+
+.square:hover{
+    transform: rotate(0deg) !important;
+}
+
+.square.rotate {
+    /* rotate takes in degrees how much to rotate */
+    /* transform: rotate(45deg);
+    transform: rotateX(45deg);
+    transform: rotateY(45deg); */
+    transform: rotateZ(45deg);
+}
+
+.square.scale {
+    /* scales takes in  % how large or small to make 
+    an elemetn relative to it's base size */
+    transform: scale(.2);
+}
+
+.square.skew{
+    /* grabs opposite corners and pulls them one way or another */
+    transform: skew(45deg);
+}
+
+.square.translate{
+    /* moves it somewhere on the page */
+    transform: translate(200px, 100px);
+}
